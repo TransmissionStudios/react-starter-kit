@@ -10,13 +10,13 @@ module.exports = {
   context: srcPath,
 
   entry: {
-    index: 'index.jsx'
+    index: 'index.js'
   },
 
   output: {
     path: distPath,
     publicPath: '/',
-    filename: 'bundle.[hash].js'
+    filename: 'bundle.js'
   },
 
   plugins: [
@@ -45,7 +45,7 @@ module.exports = {
       { test: /\.css$/,
         loaders: ['style', 'css', 'autoprefixer']
       },
-      { test: /\.(ttf|eot|svg|otf|png|woff|woff2)$/,
+      { test: /\.(ttf|eot|svg|otf|png|jpg|woff|woff2)$/,
         loader: 'file'
       }
     ]

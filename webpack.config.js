@@ -2,7 +2,7 @@ var webpack           = require('webpack');
 var path              = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var srcPath           = path.join(__dirname, 'src');
-var distPath          = path.join(__dirname, 'dist');
+var distPath          = path.join(__dirname, 'www');
 
 module.exports = {
 
@@ -15,7 +15,7 @@ module.exports = {
 
   output: {
     path: distPath,
-    publicPath: '/',
+    publicPath: '',
     filename: 'bundle.js'
   },
 

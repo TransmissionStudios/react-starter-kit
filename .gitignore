@@ -1,4 +1,8 @@
+# Project
 node_modules
 npm-debug.log
+www
+
+# IDE/OS
 .DS_Store
 .idea/

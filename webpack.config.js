@@ -54,7 +54,7 @@ module.exports = {
   // Settings for webpack-dev-server
   // `--hot` and `--progress` must be set using CLI
   devServer: {
-    contentBase: './src',
+    contentBase: './www',
     colors: true,
     noInfo: true,
     inline: true,

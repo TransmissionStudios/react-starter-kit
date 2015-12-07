@@ -21,56 +21,33 @@ To output static assets into /www and watch for changes, run the following comma
     webpack --watch
 
 
--
-WORK IN PROGRESS
--
+<br/>
 
-Android sdk stuff - MAC
-install andriod sdk's from
+Development inc Cordova:
+------------
+Mac:
 
-http://developer.android.com/sdk/installing/index.html?pkg=tools
+ - Have latest version of xCode
+ - install andriod sdk's from:
+ 	- http://developer.android.com/sdk/installing/index.html?pkg=tools or `brew install android-sdk`,
+ 	- Make sure its saved in this location: `/usr/local/Cellar/android-sdk/` (homebrew will automatically save here).
+ 	- then set your path: add into your .bashrc/.bash_profile `export ANDROID_HOME=/usr/local/opt/android-sdk`
+ 	- look at http://developer.android.com/sdk/installing/adding-packages.html and also install the `Google Repository`, `google play services` and `android support repository` in extras.
 
-then http://developer.android.com/sdk/installing/adding-packages.html
+Now:
+------------
+Run 
 
-and save in this location:
+     webpack #build local assets
 
-`/usr/local/Cellar/android-sdk/`
-
--
-
-or with homebrew `brew install android-sdk`
-
-then set your path: add into your .bashrc/.bash_profile
-
-`export ANDROID_HOME=/usr/local/opt/android-sdk`
-
-
-and install the 'Google Repository', 'google play services' 'android support repository' in extras
+     cordova platform add ios
+     cordova platform add android
+     cordova platform add browser //optional
 
 
-To get started:
----------------
-
-git clone ...
-
-Ensure you have Node v4 or above installed.
-
-    $ npm install
-    $ npm start
-
-Navigate to http://localhost:8000 in your browser.  
-Hot reloading is enabled.
-
-or
-
-webpack --watch // need to create a build process for this
-
-cordova platform add ios
-cordova platform add android
-cordova platform add browser //optional
-
-
-then you can run the application with cordova also
+then you can run the application with cordova also to emulate android on mac you have to create 
+andriod virtual device by running `/usr/local/Cellar/android-sdk/24.4.1_1/bin/android avd` 
+follow https://cordova.apache.org/docs/en/4.0.0/guide/platforms/android/
 
      cordova run browser
      cordova emulate ios
